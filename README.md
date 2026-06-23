@@ -5,8 +5,8 @@ Tanqia is a comprehensive web application developed to meet specific business re
 
 ## 🛠️ Tech Stack
 *(Note: Please update this section based on the actual technologies used)*
-*   **Backend:** PHP, Laravel Framework / OR Node.js, Express
-*   **Database:** MySQL / MongoDB
+*   **Backend:** PHP, Laravel Framework 
+*   **Database:** MySQL 
 *   **Frontend:** HTML5, CSS3, JavaScript, Bootstrap
 *   **DevOps & Hosting:** Linux, Git, Cloud Hosting (Deployment)
 
