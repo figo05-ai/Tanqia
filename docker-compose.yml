@@ -13,7 +13,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # تم إزالة قسم ports لحماية التطبيق خلف البروكسي
     volumes:
       - .:/var/www/html
     depends_on:
@@ -29,6 +28,10 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - db_data:/var/lib/mysql
+    deploy:
+      resources:
+        limits:
+          memory: 512M
 
 volumes:
   db_data:
