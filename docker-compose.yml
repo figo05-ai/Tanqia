@@ -1,15 +1,24 @@
 services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app
+    restart: always
+
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "8000:80"
+    # تم إزالة قسم ports لحماية التطبيق خلف البروكسي
     volumes:
       - .:/var/www/html
     depends_on:
       - db
-    restart: always  # إضافة دي عشان لو الكونتينر وقع يقوم تاني لوحده
+    restart: always 
 
   db:
     image: mysql:8.0
